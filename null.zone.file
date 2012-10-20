@@ -1,0 +1,11 @@
+$TTL 1h                  ; default expiration time of all resource records without their own TTL value
+@  IN         SOA  ns.example.com. foo.example.com. (
+              2012102105 ; serial number of this zone file
+              1d         ; slave refresh (1 day)
+              2h         ; slave retry time in case of a problem (2 hours)
+              4w         ; slave expiration time (4 weeks)
+              1h         ; maximum caching time in case of failed lookups (1 hour)
+              )
+              NS    ns.example.com
+              A     127.0.0.1
+*             A     127.0.0.1
